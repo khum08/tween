@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset=UTF-8>
+    <meta http-equiv=X-UA-Compatible content=IE=edge>
+    <meta name=viewport content=width=device-width, initial-scale=1.0>
+    <title>Default Page</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;   
+        }
+        html body {
+            height: 100%;
+            width: 100%;
+        }
+
+        .line {
+            height: 3px;
+            background-color:red;
+        }
+        .line2 {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="line" class="line"></div>
+    <div id="line2" class="line line2"></div>
+    <script src='../dist/tween.js'></script>
+    <script>
+        const line = document.getElementById('line');
+        const line2 = document.getElementById('line2');
+
+        const params = {
+            start: 0,
+            end: 100,
+            duration: 1000,
+            infinite: true,
+            alternate: false,
+            onUpdate: v => {
+                console.log(v);
+                line.style.width = `${v}%`;
+            },
+            onComplete: () => {
+                console.log('mission completed');
+            }
+        }
+
+        let t = new Tween.Tween(params);
+
+        const params2 = {
+            ...params,
+            infinite: true,
+            alternate: true,
+            onUpdate: v => {
+                console.log(v);
+                line2.style.width = `${v}%`;
+            },
+            onComplete: () => {
+                console.log('mission2 completed');
+            },
+            timing: v => {
+                return v;
+            }
+        }
+        let t2 = new Tween.Tween(params2);
+
+        t.start();
+        t2.start();
+
+        setTimeout(() => {
+            t.stop();
+        }, 3500);
+    </script>
+</body>
+</html>
+
