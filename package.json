@@ -1,7 +1,9 @@
 {
   "name": "yzk-tween",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "./dist/tween.js",
+  "keywords": ["tween", "animation"],
+
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack build -w",
