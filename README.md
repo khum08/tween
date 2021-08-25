@@ -3,18 +3,18 @@
 ![npm-size](https://img.shields.io/bundlephobia/minzip/yzk-tween)
 ![npm-download](https://img.shields.io/npm/dm/yzk-tween)
 
-# Intro
+## Intro
 Simple、Lightful、Efficient tween interpolate library. less than 2kb.
 
 
-# Quick Start
+## Quick Start
 
-## install
+### install
 ```shell
 npm install yzk-tween
 ```
 
-## usage example
+### usage example
 ```javascript
 import { Tween } from 'yzk-tween';
 
