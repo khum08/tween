@@ -1,4 +1,4 @@
-# Tween.js
+# Tween
 ![npm-version](https://img.shields.io/npm/v/yzk-tween)
 ![npm-size](https://img.shields.io/bundlephobia/minzip/yzk-tween)
 ![npm-download](https://img.shields.io/npm/dm/yzk-tween)
